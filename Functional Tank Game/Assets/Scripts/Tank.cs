@@ -48,11 +48,12 @@ public class Tank : MonoBehaviour
         // The Below code is commented out due to the fact that it adds up and down movement to the tank,
         // which is not needed for this game.
         //
-        /*
-         if (Input.GetKey(KeyCode.UpArrow))
+        
+        else if (Input.GetKey(KeyCode.W))
         {
             transform.position += Vector3.up * speed * Time.deltaTime;
         }
+        /*
         if (Input.GetKey(KeyCode.DownArrow))
         {
           transform.position += Vector3.down * speed * Time.deltaTime;
