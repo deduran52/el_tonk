@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Tank
   layers:
   - Default
   - TransparentFX
@@ -38,6 +39,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 2344924519
+    locked: 0
+  - name: Turret
+    uniqueID: 2461053379
+    locked: 0
+  - name: Tanks
+    uniqueID: 1083882417
+    locked: 0
+  - name: Bullets
+    uniqueID: 271919739
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
