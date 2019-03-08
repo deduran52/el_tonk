@@ -31,15 +31,19 @@ public class Tank : MonoBehaviour
         {
             transform.position += Vector3.right * speed * Time.deltaTime;
         }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.position += Vector3.up * speed * Time.deltaTime;
+        }
 
         //
         // This code should make the Turret Rotate
         //
-        else if (Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKey(KeyCode.LeftArrow))
         {
             TurretRotation.transform.Rotate(0, 0, 2);
         }
-        else if (Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKey(KeyCode.RightArrow))
         {
             TurretRotation.transform.Rotate(0, 0, -2);
         }
@@ -49,10 +53,6 @@ public class Tank : MonoBehaviour
         // which is not needed for this game.
         //
         
-        else if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += Vector3.up * speed * Time.deltaTime;
-        }
         /*
         if (Input.GetKey(KeyCode.DownArrow))
         {
