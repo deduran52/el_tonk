@@ -5,9 +5,11 @@ using UnityEngine;
 public class Tank : MonoBehaviour
 {
     float speed = 5.0f;
+    float projectilespeed = 250f;
     public GameObject TurretRotation;
-    //public RigidBody2D projectile;
-    //public GameObject Emitter;
+
+    public Rigidbody2D projectile;
+    public GameObject Emitter;
 
     // Start is called before the first frame update
     void Start()
@@ -46,6 +48,15 @@ public class Tank : MonoBehaviour
         else if (Input.GetKey(KeyCode.RightArrow))
         {
             TurretRotation.transform.Rotate(0, 0, -2);
+        }
+
+        //
+        // This code is for the tank to shoot
+        //
+        else if (Input.GetKey(KeyCode.Space))
+        {
+            Rigidbody2D iP = Instantiate(projectile, Emitter.transform.position, Emitter.transform.rotation) as Rigidbody2D;
+            iP.AddForce(Emitter.transform.right * projectilespeed);
         }
         
         //
