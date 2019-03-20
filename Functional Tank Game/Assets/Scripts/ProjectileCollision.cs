@@ -11,9 +11,14 @@ public class ProjectileCollision : MonoBehaviour
         Destroy(gameObject, delay);
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter(Collider2D other)
     {
         if (other.gameObject.CompareTag("Tank"))
+        {
+            Destroy(other.gameObject);
+        }
+
+        else if(other.gameObject.CompareTag("Terrain"))
         {
             Destroy(other.gameObject);
         }
