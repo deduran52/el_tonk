@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class ProjectileCollision : MonoBehaviour
 {
-    public float delay;
+    public float Impactdelay;
 
     private void Update()
     {
-        Destroy(gameObject, delay);
+        
     }
-
-    private void OnTriggerEnter(Collider other)
+    
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Tank"))
+        if(other.gameObject.CompareTag("Ground"))
         {
-            Destroy(other.gameObject);
+            Destroy(gameObject, Impactdelay);
         }
-        Destroy(gameObject);
+        else if(other.gameObject.CompareTag("Wall"))
+        {
+            Destroy(gameObject, Impactdelay);
+        }
+        else if(other.gameObject.CompareTag("Tank"))
+        {
+            Destroy(gameObject, Impactdelay);
+        }
+
     }
+    
 }
 

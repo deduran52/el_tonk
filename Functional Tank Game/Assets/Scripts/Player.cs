@@ -6,6 +6,17 @@ using UnityEngine.Networking;
 public class Player : NetworkBehaviour
     //This script represents a connected player , who might "own" other objects in the game
 {
+    public GameObject TankPrefab;
+    //public Rigidbody2D Terrain1;
+    //public Rigidbody2D Terrain2;
+
+
+
+
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,7 +24,7 @@ public class Player : NetworkBehaviour
         //AND when they die they will respawn after 3 secconds
         spawnTank();
     }//end start
-    public GameObject TankPrefab;
+    
 
     // Update is called once per frame
     void Update()
@@ -23,6 +34,11 @@ public class Player : NetworkBehaviour
 
     public void spawnTank()
     {
+        // Spawning the terrain
+        //Instantiate(Terrain1);
+        //Instantiate(Terrain2);
+        
+        
         //this gets called by the game manager when the new round starts 
         //and a player needs a tank
 
