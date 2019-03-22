@@ -116,8 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c880436da701c964098496178be07804, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 10
-  Impactdelay: 0.5
+  Impactdelay: 0.1
 --- !u!61 &823581422663504296
 BoxCollider2D:
   m_ObjectHideFlags: 0
