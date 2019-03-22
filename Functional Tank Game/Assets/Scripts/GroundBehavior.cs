@@ -5,7 +5,9 @@ using UnityEngine;
 public class GroundBehavior : MonoBehaviour
 {
 
-    public Rigidbody2D Terrain;
+    public Rigidbody2D Terrain1;
+    public Rigidbody2D Terrain2;
+    
 
     public float delay;
     public bool determineSpawn;
@@ -13,7 +15,14 @@ public class GroundBehavior : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        StartCoroutine("DoCheck");
+        //StartCoroutine("DoCheck");
+        Instantiate(Terrain1);
+        Instantiate(Terrain2);
+
+    }
+
+    private void Update()
+    {
 
     }
 
@@ -25,7 +34,7 @@ public class GroundBehavior : MonoBehaviour
             //determineSpawn = randomSpawn();
             if (determineSpawn == true)
             {
-                Rigidbody2D iP = Instantiate(Terrain, transform.position, transform.rotation) as Rigidbody2D;
+                //Rigidbody2D iP = Instantiate(Terrain, transform.position, transform.rotation) as Rigidbody2D;
             }
             yield return new WaitForSeconds(delay);
             determineSpawn = false;

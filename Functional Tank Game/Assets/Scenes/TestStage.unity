@@ -123,9 +123,10 @@ GameObject:
   - component: {fileID: 22835901}
   - component: {fileID: 22835900}
   - component: {fileID: 22835902}
+  - component: {fileID: 22835904}
   m_Layer: 0
   m_Name: Ground
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -218,6 +219,24 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &22835904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 22835899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fc1ad32656e88c4bb565ef45b9943ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Terrain1: {fileID: 8428121623677170313, guid: 159ab7251454bb74e944e3b535e9eee7,
+    type: 3}
+  Terrain2: {fileID: 4060431587837734038, guid: e0afff22ce915e446a0c8d3e4ca73eda,
+    type: 3}
+  delay: 0
+  determineSpawn: 0
 --- !u!1 &376159025
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +250,7 @@ GameObject:
   - component: {fileID: 376159029}
   m_Layer: 0
   m_Name: LeftWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -622,7 +641,7 @@ GameObject:
   - component: {fileID: 1223007774}
   m_Layer: 0
   m_Name: RightWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -772,7 +791,7 @@ MonoBehaviour:
   m_LogLevel: 2
   m_PlayerPrefab: {fileID: 8302215006975081289}
   m_AutoCreatePlayer: 1
-  m_PlayerSpawnMethod: 0
+  m_PlayerSpawnMethod: 1
   m_OfflineScene: 
   m_OnlineScene: 
   m_SpawnPrefabs:
@@ -1081,20 +1100,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a9aa0c76e7a59044872774b024fa547, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TankPrefab: {fileID: 6467076713657787745, guid: 7c0bc236aead6c14db4c65fb5f85ab99,
+  TankPrefab: {fileID: 4613436528169460633, guid: 7c0bc236aead6c14db4c65fb5f85ab99,
     type: 3}
---- !u!114 &8302215006975081293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8302215006975081289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fc1ad32656e88c4bb565ef45b9943ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Terrain: {fileID: 8428121623677170313, guid: 159ab7251454bb74e944e3b535e9eee7, type: 3}
-  delay: 30
-  determineSpawn: 0
