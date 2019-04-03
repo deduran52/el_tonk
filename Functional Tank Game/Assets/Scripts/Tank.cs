@@ -4,19 +4,15 @@ using UnityEngine;
 
 public class Tank : MonoBehaviour
 {
-    /* Movement flags and variables */
     float speed = 5.0f;
-    private bool isGrounded;
-
-
-    /* Fire flags and varables */
     int zAngle = 1;
     float projectilespeed = 125;
-
-    /* public variables that can be changes in unity */
     public GameObject TurretRotation;
+
     public Rigidbody2D projectile;
     public GameObject Emitter;
+
+    private bool isGrounded;
 
     // Start is called before the first frame update
     void Start()
